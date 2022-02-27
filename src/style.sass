@@ -1,0 +1,315 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: Motnserrat, sans-serif
+
+main
+  height: 100vh
+  display: flex
+
+section
+  width: 78%
+  padding: 56px 100px 0 57px
+  position: relative
+
+.vanta
+  position: absolute
+  bottom: 0
+  right: 0
+  width: 100%
+  height: 100%
+  z-index: -2
+
+.zeroTask
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  font-family: Montserrat, sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 32px
+  line-height: 39px
+  color: #f4fdff
+
+
+.sidebar
+  width: 22%
+  height: 100%
+  background-color: #F1F1F1
+  display: flex
+  flex-direction: column
+  row-gap: 50px
+  padding: 60px 20px 60px
+
+  &__add-form-colors
+    display: flex
+    justify-content: space-between
+    list-style-type: none
+    margin: 10px 0
+  &__add-form-circle
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    opacity: 50%
+    &.active
+      border: 2px solid #64C4ED
+      opacity: 100%
+      transform: scale(1.5)
+  &__list-color
+    width: 10px
+    height: 10px
+    border-radius: 50%
+
+  &__all, &__add-btn, &__list-item
+    position: relative
+    display: flex
+    align-items: center
+    column-gap: 9px
+    height: 40px
+    padding: 0 10px 0 10px
+    border-radius: 4px
+    cursor: pointer
+    border: none
+    background-color: transparent
+    transition: 0.5s
+    .folder__list-delete
+      font-size: 0
+    &:hover
+      background-color: #fff
+      .folder__list-delete
+        font-size: 15px
+        padding-right: 5px
+
+    span
+      font-size: 22px
+
+
+  &__list-item
+    font-family: Roboto, sans-serif
+    text-transform: uppercase
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    letter-spacing: 0.15px
+    color: #000000
+    margin-bottom: 10px
+
+    &:last-child
+      margin-bottom: 0
+
+  &__add-form
+    display: none
+    width: 235px
+    height: 148px
+    background-color: #fff
+    padding: 18px
+    position: relative
+
+    &-close
+      font-size: 25px
+      position: absolute
+      top: 0
+      right: 0
+      transform: translate(50%, -50%)
+      border: none
+      background-color: transparent
+      cursor: pointer
+
+    &-input
+      width: 100%
+      background-color: #ffffff
+      border: 1px solid #efefef
+      outline: none
+      font-style: normal
+      font-weight: 600
+      font-size: 14px
+      line-height: 17px
+      letter-spacing: 0.15px
+      color: #C7C7C7
+      padding-left: 11px
+      margin-bottom: 10px
+
+    &-btn
+      width: 100%
+      height: 37px
+      background: #4DD599
+      border-radius: 4px
+      border: none
+      cursor: pointer
+      font-style: normal
+      font-weight: 600
+      font-size: 14px
+      line-height: 17px
+      text-align: center
+      letter-spacing: 0.15px
+      color: #FFFFFF
+
+
+
+
+.folder
+  position: relative
+  &__deleteDone
+    position: absolute
+    top: 0
+    right: 0
+    cursor: pointer
+    font-size: 22px
+    &:hover
+      color: #64C4ED
+  &__list-no
+    color: #64C4ED
+    margin-top: 20px
+  &__folder-block
+    display: flex
+    column-gap: 20px
+  &__title
+    font-style: normal
+    font-weight: bold
+    font-size: 32px
+    line-height: 39px
+    color: #64C4ED
+    text-transform: uppercase
+    margin-bottom: 52px
+    position: relative
+    &-change
+      font-size: 25px
+      cursor: pointer
+      &:hover
+         color: #64C4ED
+    &-input
+      max-width: 240px
+      border: none
+      outline: none
+      border-bottom: 1px solid #64C4ED
+      font-style: normal
+      font-weight: 500
+      font-size: 17px
+      line-height: 19px
+
+    &::before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 2px
+      bottom: -20px
+      left: 0
+      background: #F2F2F2
+
+  &__form
+    &-input
+      width: 415px
+      height: 38px
+      background: #FFFFFF
+      border: 1px solid #EFEFEF
+      box-sizing: border-box
+      border-radius: 4px
+      outline: none
+      padding-left: 15px
+      font-style: normal
+      font-weight: 500
+      font-size: 14px
+      line-height: 17px
+      letter-spacing: 0.15px
+      color: #C7C7C7
+      margin: 10px 0 16px
+
+      &::placeholder
+        color: #C7C7C7
+
+    &-add
+      width: 145px
+      height: 34px
+      background: #4DD599
+      border-radius: 4px
+      border: none
+      font-style: normal
+      font-weight: 600
+      font-size: 14px
+      line-height: 17px
+      text-align: center
+      letter-spacing: 0.15px
+      color: #FFFFFF
+      cursor: pointer
+      margin-right: 9px
+
+    &-cancel
+      width: 90px
+      height: 34px
+      background: #F4F6F8
+      border-radius: 4px
+      font-style: normal
+      font-weight: 600
+      font-size: 14px
+      line-height: 17px
+      text-align: center
+      letter-spacing: 0.15px
+      color: #9C9C9C
+      border: none
+      cursor: pointer
+
+  &__list
+    display: flex
+    flex-direction: column
+    list-style-type: none
+    row-gap: 20px
+    margin-bottom: 20px
+    position: relative
+
+    &-item
+      display: flex
+      column-gap: 15px
+      align-items: center
+      font-style: normal
+      font-weight: 500
+      font-size: 17px
+      line-height: 19px
+      color: white
+      &.active
+        .folder__list-item-text
+          text-decoration: line-through #4DD599
+        .folder__list-circle
+          display: flex
+          align-items: center
+          justify-content: center
+          background: #4DD599
+          border: 2px solid #4DD599
+          color: white
+          font-size: 12px
+          &::before
+            content: '✔'
+
+
+
+
+
+
+    &-circle
+      width: 20px
+      height: 20px
+      display: flex
+      border: 2px solid #E8E8E8
+      border-radius: 50%
+      cursor: pointer
+
+    &-delete
+      position: absolute
+      right: 0
+      cursor: pointer
+      color: #C7C7C7
+      font-size: 20px
+      &:hover
+        color: red
+
+
+
+
+
+.folder__list-item-block
+  display: flex
+  column-gap: 20px
+
+
